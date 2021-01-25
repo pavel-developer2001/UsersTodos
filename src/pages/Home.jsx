@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [users, setUsers] = React.useState([]);
@@ -14,7 +14,11 @@ const Home = () => {
 
   return (
     <div className="home">
-        {users.map((user) => <Link to={`/todo/${user.id}`} key={user.id}>{user.name}</Link>)} 
+      {users.map((user) => (
+        <Link to={`/todo/${user.id}`} key={user.id}>
+          {user.name}
+        </Link>
+      ))}
     </div>
   );
 };
